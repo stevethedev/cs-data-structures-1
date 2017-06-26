@@ -23,35 +23,35 @@
  */
 (function(window) {
     /**
-     * Open a message-box to tell the user that we have
-     * an empty array
+     * Open a message-box to tell the user that a
+     * dictionary has no length attribute
      */
-    function zeroLength()
+    function undefinedLength()
     {
-        var array = [];
-        alert('array.length: ' + array.length);
+        var dictionary = {};
+        alert('typeof dictionary.length: ' + typeof dictionary.length);
     }
 
     /**
-     * Open a message-box to tell the user that we have
-     * an array with 1001 indexes
+     * Open a message-box to tell the user that
+     * this dictionary has only one key
      */
-    function thousandLength()
+    function countKeys()
     {
-        var array = [];
-        array[1000] = true;
-        alert('array.length: ' + array.length);
+        var dictionary = {};
+        dictionary['string key'] = true;
+        alert('number of keys: ' + Object.keys(dictionary).length);
     }
 
     /**
-     * Open a message-box to tell the user that we can
-     * access any element in an array really quickly
+     * Open a message-box to tell the user that we can access
+     * any element in a dictionary really quickly
      */
     function accessSpeed()
     {
-        var array = [];
+        var dictionary = {};
         var startTimer = window.performance.now();
-        array[42] = 'the meaning of life';
+        dictionary['fourty-two'] = 'the answer to life, the universe, and everything';
         var endTimer = window.performance.now();
         alert('duration: ' + (endTimer - startTimer) + 'ms');
     }
@@ -60,9 +60,9 @@
      * Global object for the tutorial
      * @type {Object}
      */
-    window.array = {
-        'zeroLength': zeroLength,
-        'thousandLength': thousandLength,
+    window.dictionary = {
+        'undefinedLength': undefinedLength,
+        'countKeys': countKeys,
         'accessSpeed': accessSpeed,
     };
 

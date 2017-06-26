@@ -23,46 +23,48 @@
  */
 (function(window) {
     /**
-     * Open a message-box to tell the user that we have
-     * an empty array
+     * Open a message-box to tell the user that the
+     * linked list has a head node
      */
-    function zeroLength()
+    function firstNode()
     {
-        var array = [];
-        alert('array.length: ' + array.length);
+        var chain = new LinkedList(1000);
+        alert('typeof chain.head: ' + typeof chain.head);
     }
 
     /**
-     * Open a message-box to tell the user that we have
-     * an array with 1001 indexes
+     * Open a message-box to tell the user that the
+     * linked list has slow random-access speeds
      */
-    function thousandLength()
+    function randomAccess()
     {
-        var array = [];
-        array[1000] = true;
-        alert('array.length: ' + array.length);
+        var chain = new LinkedList(1000);
+        var startTimer = window.performance.now();
+        chain.get(1000);
+        var endTimer = window.performance.now();
+        alert('random access: ' + (endTimer - startTimer) + 'ms');
     }
 
     /**
-     * Open a message-box to tell the user that we can
-     * access any element in an array really quickly
+     * Open a message-box to tell the user that we can access
+     * any element in a dictionary really quickly
      */
     function accessSpeed()
     {
-        var array = [];
+        var chain = new LinkedList(1000);
         var startTimer = window.performance.now();
-        array[42] = 'the meaning of life';
+        chain.pop();
         var endTimer = window.performance.now();
-        alert('duration: ' + (endTimer - startTimer) + 'ms');
+        alert('popped stack: ' + (endTimer - startTimer) + 'ms');
     }
 
     /**
      * Global object for the tutorial
      * @type {Object}
      */
-    window.array = {
-        'zeroLength': zeroLength,
-        'thousandLength': thousandLength,
+    window.dictionary = {
+        'firstNode': firstNode,
+        'randomAccess': randomAccess,
         'accessSpeed': accessSpeed,
     };
 
