@@ -62,7 +62,7 @@
      * Global object for the tutorial
      * @type {Object}
      */
-    window.dictionary = {
+    window.chain = {
         'firstNode': firstNode,
         'randomAccess': randomAccess,
         'accessSpeed': accessSpeed,
