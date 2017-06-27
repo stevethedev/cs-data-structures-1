@@ -1,0 +1,34 @@
+{
+  "name": "cs-data-structures-1",
+  "version": "1.0.0",
+  "description": "Steve the Dev's Computer Science - Data Structures #1 Code Examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevethedev/cs-data-structures-1.git"
+  },
+  "keywords": [
+    "stevethedev",
+    "computer",
+    "science",
+    "data",
+    "structures",
+    "code",
+    "example"
+  ],
+  "author": "Steven Jimenez <steven@stevethedev.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevethedev/cs-data-structures-1/issues"
+  },
+  "homepage": "https://github.com/stevethedev/cs-data-structures-1#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
+  }
+}
